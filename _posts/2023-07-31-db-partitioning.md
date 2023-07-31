@@ -22,7 +22,7 @@ Database partitioning is the practice of splitting a large database into smaller
 
 # Approaches to Database Partitioning
 
-## Range Partitioning:
+### Range Partitioning:
 
 Range partitioning involves dividing data based on specific ranges of a chosen attribute, such as dates, numbers, or alphabetical values. For instance, a sales database could be partitioned by sales date, where each partition contains data for a particular date range (e.g., monthly or quarterly).
 
@@ -37,7 +37,7 @@ Cons:
 - Imbalanced partitions may occur if data distribution is skewed.
 - Adding new data beyond the partition range requires careful management.
 
-## List Partitioning:
+### List Partitioning:
 
 List partitioning entails categorizing data into predefined lists or groups based on a specific attribute. For example, a product database could be partitioned by product categories, where each partition contains data for a specific category.
 
@@ -51,7 +51,7 @@ Cons:
 - Inefficient for range-based queries, as data within partitions may not be contiguous.
 - May lead to unbalanced partitions if one category becomes more dominant.
 
-## Hash Partitioning:
+### Hash Partitioning:
 
 Hash partitioning involves using a hashing algorithm on a chosen attribute to distribute data uniformly across partitions. This approach ensures an even distribution of data, reducing the risk of imbalanced partitions.
 
@@ -65,7 +65,7 @@ Cons:
 - Challenging to perform range-based or list-based queries efficiently.
 - Adding or removing partitions may require extensive data redistribution.
 
-## Round-robin Partitioning:
+### Round-robin Partitioning:
 
 In round-robin partitioning, data is sequentially distributed to partitions in a cyclical manner. Each new piece of data is assigned to the next available partition, ensuring an even distribution.
 
